@@ -29,7 +29,7 @@
 <script lang="ts">
 import { StoreKey } from "@/store";
 import { injectStrict } from "@/utils";
-import { ItemType } from "@/types";
+import { ItemType, IDragOptions } from "@/types";
 import { defineComponent, ref, computed, PropType } from "vue";
 import draggable from "vuedraggable";
 import StatusItem from "./StatusItem.vue";
@@ -63,7 +63,7 @@ export default defineComponent({
       toggleOpenState(null);
     };
 
-    const dragOptions = computed(() => ({
+    const dragOptions = computed<IDragOptions>(() => ({
       animation: 200,
       group: "description",
       disabled: false,

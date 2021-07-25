@@ -115,3 +115,10 @@ export interface IStatusItem extends IStatusCommon {
 export interface ISelectedStatus extends IStatusCommon {
   id: number;
 }
+
+export interface IDragOptions {
+  animation: number;
+  group: string;
+  disabled: boolean;
+  ghostClass: string;
+}
